@@ -9,6 +9,9 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@authing/guard-react": "^5.3.7",
+    "@authing/react-ui-components": "^4.5.27",
+    "@kinde-oss/kinde-auth-nextjs": "^2.3.8",
     "@radix-ui/react-slot": "^1.1.0",
     "@tailwindcss/typography": "^0.5.15",
     "@types/node": "22.5.1",

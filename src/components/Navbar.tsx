@@ -1,6 +1,8 @@
 import Link from "next/link"
 import MaxWidthWrapper from "./MaxWidthWrapper"
-
+import { buttonVariants } from "./ui/button"
+import { ArrowRight } from "lucide-react"
+import { LoginLink, RegisterLink } from "@kinde-oss/kinde-auth-nextjs/server"
 const Navbar = () => {
     return (
         <nav className="sticky h-14 inset-x-0 top-0 z-30 w-full border-b border-gray-200 bg-white/75 backdrop-blur-lg transition-all">
@@ -11,6 +13,32 @@ const Navbar = () => {
                     className="flex z-40 font-semibold">
                         <span>RealtimePDF</span>
                     </Link>
+
+                    {/* 增加导航栏内容 */}
+                    <div className="hidden items-center space-x-4 sm:flex">
+                        <>
+                          <Link 
+                            href='/pricing'
+                            className={buttonVariants({
+                              variant: 'ghost',
+                              size: 'sm',
+                            })}>价格</Link>
+                            <LoginLink 
+                            href='/api/login'
+                            className={buttonVariants({
+                              variant: 'ghost',
+                              size: 'sm',
+                            })}>登录</LoginLink>
+                            <RegisterLink 
+                            href='/api/login'
+                            className={buttonVariants({
+                              size: 'sm',
+                            })}>
+                                开始吧<ArrowRight className='ml-1.5 h-5 w-5'/>
+                                </RegisterLink>
+                        </>
+                    </div>
+
                 </div>
             </MaxWidthWrapper>
         </nav>
