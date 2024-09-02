@@ -24,13 +24,11 @@ const Navbar = () => {
                               size: 'sm',
                             })}>价格</Link>
                             <LoginLink 
-                            href='/api/login'
                             className={buttonVariants({
                               variant: 'ghost',
                               size: 'sm',
                             })}>登录</LoginLink>
                             <RegisterLink 
-                            href='/api/login'
                             className={buttonVariants({
                               size: 'sm',
                             })}>
