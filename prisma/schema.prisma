@@ -9,12 +9,40 @@ generator client {
   provider = "prisma-client-js"
 }
 
+// 用户模型
 model User {
   id String @id @unique
   email String @unique
+
+  File File[] // 文件数组
+
   name String?  // 确保 name 字段是必填的
   stripeCustomerId String? @unique @map(name: "stripe_customer_id")
   stripeSubscriptionId String? @unique @map(name: "stripe_subscription_id")
   stripePriceId String? @map(name: "stripe_price_id")
   stripeCurrentPeriodEnd DateTime? @map(name: "stripe_current_period_end")
+}
+
+// 文件上传状态
+enum UploadStatus {
+  PENDING
+  PROCESSING
+  FAILD
+  SUCCESS
+}
+
+// 文件
+model File {
+  id String @id @default(cuid())
+  name String
+
+  uploadStatus UploadStatus @default(PENDING)
+
+  url String
+  key String
+
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  User User? @relation(fields: [userId], references: [id])
+  userId String?
 }
