@@ -23,6 +23,7 @@ export const appRouter = router({
                     data: {
                         id: user.id,
                         email: user.email,
+                        name: user.username || 'Default Name', // 确保 name 字段有默认值
                     }
                 })
             }
