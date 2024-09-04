@@ -46,7 +46,24 @@ export const appRouter = router({
             })
         }),
 
-    // Api端点3：删除文件/私密
+    // Api端点3：上传文件/私密
+        getFile: privateProcedure.input(z.object({key: z.string()}))
+        .mutation(async ({ctx, input}) => {
+            const {userId} = ctx
+
+            const file = await db.file.findFirst({
+                where: {
+                    key: input.key,
+                    userId,
+                },
+            })
+
+            if(!file) throw new TRPCError({ code: 'NOT_FOUND' });
+
+            return file
+        }),
+
+    // Api端点4：删除文件/私密
         deleteFile: privateProcedure.input(
             z.object({ id: z.string() })
         ).mutation(async ({ctx, input}) => {
