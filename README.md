@@ -1,4 +1,4 @@
-![RealtimePDF]('https://github.com/ACE-wil/RealtimePDF/blob/main/public/thumbnail.png')
+<img src="https://raw.githubusercontent.com/ACE-wil/RealtimePDF/main/public/realpdf.png" alt="RealtimePDF" width="500">
 
 RealtimePDF - 一个现代化的全栈SaaS平台
 
