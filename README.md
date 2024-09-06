@@ -1,4 +1,4 @@
-<img src="https://raw.githubusercontent.com/ACE-wil/RealtimePDF/main/public/realpdf.png" alt="RealtimePDF" width="500">
+<img src="https://raw.githubusercontent.com/ACE-wil/RealtimePDF/main/public/realpdf.svg" alt="RealtimePDF" width="500">
 
 RealtimePDF - 一个现代化的全栈SaaS平台
 
