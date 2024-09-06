@@ -7,12 +7,12 @@ import { redirect } from "next/navigation"
 
 interface PageProps {
     params: {
-        fileid: string
+        fileId: string
     }
 }
 
 const Page = async ({params} : PageProps) => {
-    const {fileid} = params
+    const {fileId} = params
 
     const {getUser} = getKindeServerSession()
 
@@ -22,7 +22,7 @@ const Page = async ({params} : PageProps) => {
     
     const file = await db.file.findFirst({
         where: {
-            id: fileid,
+            id: fileId,
             userId: (await user).id
         },
     })

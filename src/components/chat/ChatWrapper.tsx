@@ -7,6 +7,7 @@ import { trpc } from '@/app/_trpc/client'
 import { ChevronLeft, Loader2, XCircle } from 'lucide-react'
 import { buttonVariants } from '../ui/button'
 import Link from 'next/link'
+import { ChatContextProvider } from './ChatContext'
 
 
 interface ChatWrapperProps {
@@ -15,7 +16,8 @@ interface ChatWrapperProps {
 
 const ChatWrapper = ({fileId} : ChatWrapperProps) => {
 
-  const {data, isLoading} = trpc.getFileUploadStatus.useQuery({
+  const {data, isLoading} = trpc.getFileUploadStatus.useQuery(
+    {
     fileId,
   },{
     refetchInterval: (data) => 
@@ -84,13 +86,15 @@ if(data?.status === 'FAILD') return (
   )
 
   return (
+    <ChatContextProvider fileId={fileId}>
     <div className='relative min-h-full bg-zinc-50 flex divide-y divide-zinc-200 flex-col justify-between gap-2'>
         <div className='flex-1 justify-between flex flex-col mb-28'>
-          <Messages />
+          <Messages fileId={fileId}/>
         </div>
 
-        <ChatInput isDisabled/>
-      </div>
+        <ChatInput />
+    </div>
+    </ChatContextProvider>
   )
 }
 
