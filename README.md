@@ -39,6 +39,27 @@ RealtimePDF - 一个现代化的全栈SaaS平台
 
 🎁 ...还有更多功能
 
+# 各个模块效果图如下：
+## 登录采用google登录
+
+## 主页图
+<img src="https://raw.githubusercontent.com/ACE-wil/RealtimePDF/main/public/pic1.png" alt="RealtimePDF" width="500">
+
+## 我的文件
+<img src="https://raw.githubusercontent.com/ACE-wil/RealtimePDF/main/public/pic2.png" alt="RealtimePDF" width="500">
+
+## 对话测试图（由于Pinecone的免费额度限制，所以无法测试）
+<img src="https://raw.githubusercontent.com/ACE-wil/RealtimePDF/main/public/pic3.png" alt="RealtimePDF" width="500">
+
+## 上传文件效果图
+<img src="https://raw.githubusercontent.com/ACE-wil/RealtimePDF/main/public/pic4.png" alt="RealtimePDF" width="500">
+
+## 文件全屏预览
+<img src="https://raw.githubusercontent.com/ACE-wil/RealtimePDF/main/public/pic5.png" alt="RealtimePDF" width="500">
+
+## 定价页面
+<img src="https://raw.githubusercontent.com/ACE-wil/RealtimePDF/main/public/pic6.png" alt="RealtimePDF" width="500">
+
 ## 入门指南
 
 要开始使用此项目，请运行以下命令：
